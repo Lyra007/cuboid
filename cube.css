@@ -1,0 +1,68 @@
+@keyframes spin {
+	from {
+		transform: rotateX(0deg) rotateY(0deg);
+	}
+	to{
+		transform: rotateX(360deg) rotateY(360deg);
+	}
+}
+
+
+
+.container{
+	height: 700px;
+	width: 700px;
+	perspective: 10000px;
+	perspective-origin: 50% 50%;
+	transform-style: preserve-3d;
+	animation: spin 6s infinite linear;
+	margin: 0 auto;
+	
+}
+
+.top-bottom >div {
+	position: absolute;
+	height: 100px;
+	width: 100px;
+	opacity: 0.9;
+}
+
+.around > div{
+	height: 200px;
+	width: 100px;
+	opacity: 0.9;
+	margin: 0 auto;
+	position: absolute;
+}
+
+.top{
+	transform: rotateX(90deg) translateZ(50px);
+	background-color: greenyellow;
+}
+
+.bottom{
+	transform: rotateX(-90deg) translateZ(150px);
+	background-color: gray;
+}
+
+.left{
+	transform: rotateY(-90deg) translateZ(50px);
+	background-color: deepskyblue;
+}
+
+.right{
+	transform: rotateY(90deg) translateZ(50px);
+	background-color: orange;
+}
+
+.front{
+	transform: translateZ(50px);
+	background-color: pink;
+}
+
+.back{
+	transform: translateZ(-50px);
+	background-color: yellow;
+}
+
+
